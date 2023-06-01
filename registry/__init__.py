@@ -1,0 +1,1 @@
+from registry.app import create_app

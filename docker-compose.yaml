@@ -1,0 +1,23 @@
+---
+version: "3.0"
+
+services:
+
+  soteria-webapp:
+
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    image: namespace-registry-webapp:dev
+    platform: linux/amd64
+    container_name: namespace-registry-webapp
+    restart: always
+
+    volumes:
+      - "${PWD}/config.py:/srv/registry/config.py"
+      - "${PWD}/db_data:/srv/registry/db_data"
+      # - "${PWD}/instance/logs.log:/var/log/httpd/local_default_ssl_error_ssl.log"
+
+    ports:
+      - "8443:8443"

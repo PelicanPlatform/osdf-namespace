@@ -1,0 +1,7 @@
+Flask
+Flask-SQLAlchemy
+SQLAlchemy
+Flask-Migrate
+Flask-OAuthlib
+PyJWT
+flask-smorest
