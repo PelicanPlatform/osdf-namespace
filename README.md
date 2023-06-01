@@ -7,7 +7,7 @@ The Web application is implemented using [Flask](https://flask.palletsprojects.c
 ## Quickstart: Tesing on localhost
 ### Prerequisites
 - A CILogon OIDC Clinet ID and Secret
-- Add `httpd.conf` and `supervisor-apache.conf` to `apache/`
+- Add `httpd.conf` to `apache/`
 
 ### Run Local Service
 ```
