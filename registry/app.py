@@ -10,6 +10,8 @@ from registry.models import db, Namespace, NamespaceSchema
 from registry.views import namespace_blp
 from registry.logger import configure_logging
 
+# from registry.cryp import load_key_pair
+
 import sqlalchemy
 
 THIS_FILE = pathlib.Path(__file__)
@@ -25,6 +27,9 @@ def load_config(app: flask.Flask) -> None:
     app.config['OPENAPI_SWAGGER_UI_PATH'] = '/swagger-ui'
     app.config["OPENAPI_SWAGGER_UI_URL"] = "https://cdn.jsdelivr.net/npm/swagger-ui-dist/"
     app.config['OPENAPI_SWAGGER_UI_CONFIG'] = {'deepLinking': True, 'supportedSubmitMethods': ['get', 'post', 'delete']}
+    # private_key, public_key = load_key_pair()
+    # app.config['PRIVATE_KEY'] = private_key 
+    # app.config['PUBLIC_KEY'] = public_key
 
 
 def create_db(app: flask.Flask) -> None:

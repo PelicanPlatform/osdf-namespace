@@ -7,7 +7,7 @@ services:
 
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile_dev
 
     image: namespace-registry-webapp:dev
     platform: linux/amd64

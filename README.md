@@ -18,6 +18,7 @@ docker compose up
 ### Debug Local Service 
 ```
 docker exec -it namespace-registry-webapp /bin/bash
+cat /var/log/httpd/local_default_ssl_error_ssl.log
 ```
 
 ## Services
